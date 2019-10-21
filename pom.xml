@@ -202,12 +202,6 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  <repositories>
-    <repository>
-      <id>gitlab-maven</id>
-      <url>https://gitlab.com/api/v4/groups/4864431/packages/maven</url>
-    </repository>
-  </repositories>
   <distributionManagement>
     <repository>
       <id>gitlab-maven</id>
@@ -218,6 +212,13 @@
       <url>https://gitlab.com/api/v4/projects/${env.CI_PROJECT_ID}/packages/maven</url>
     </snapshotRepository>
   </distributionManagement>
+  <!-- <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub OWNER Apache Maven Packages</name>
+      <url>https://maven.pkg.github.com/RavimoShark/apis-task-libs-android</url>
+    </repository>
+  </distributionManagement> -->
   <properties>
     <java.version>1.7</java.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
