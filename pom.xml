@@ -1,10 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.ravimoshark</groupId>
-  <artifactId>apis.task</artifactId>
+  <groupId>com.ravimoshark.apis</groupId>
+  <artifactId>task</artifactId>
   <packaging>jar</packaging>
-  <name>apis.task</name>
+  <name>task</name>
   <version>1.0.0</version>
   <url>https://gitlab.com/ravimosharksas/apis/task/libs/android.git</url>
   <description>Ravimoshark Task API android library</description>
