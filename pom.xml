@@ -205,7 +205,7 @@
   <repositories>
     <repository>
       <id>gitlab-maven</id>
-      <url>https://gitlab.com/api/v4/groups/ravimosharksas/-/packages/maven</url>
+      <url>https://gitlab.com/api/v4/groups/4864431/packages/maven</url>
     </repository>
   </repositories>
   <distributionManagement>
