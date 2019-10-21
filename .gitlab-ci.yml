@@ -10,7 +10,7 @@ variables:
   JAVA_MAIN_IMAGE_TAG: "3.5.2-jdk-8"
   JAVA_MAIN_EXECUTE_TEST: "true" # To execute test.
   JAVA_MAIN_EXECUTE_DEPLOY: "true" # To deploy to maven.
-  ORIGINAL_REPOSITORY: "ravimosharksas/apis/task/libs/android"
+  ORIGINAL_REPOSITORY: "singletonsd/ravimosharksas/apis/task/libs/android"
 stages:
   - build
   - test
