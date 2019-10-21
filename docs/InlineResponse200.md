@@ -4,4 +4,4 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **metadata** | [**Metadata**](Metadata.md) |  |  [optional]
-**items** | [**List&lt;Clients&gt;**](Clients.md) |  |  [optional]
+**items** | [**List&lt;Interventions&gt;**](Interventions.md) |  |  [optional]

@@ -1,6 +1,6 @@
 /*
- * Ravimoshark Contract API
- * This is an API to interact with Ravimoshark contracts database. # Introduction This API allow to create, modify and delete contracts and machines. It also interacts with machines imported from SAGE database. # User Authentication This API does not contain any kind of user validation but It request to have a valid authentication user to interact with it. For more information about user Authentication, please refer to [Ravimoshark User Authentication](https://ravimoshark.com/back/apis/auth/latest). 
+ * Ravimoshark Task API
+ * This is an API to interact with Ravimoshark task database. # Introduction This API allow to create, modify and delete task, visits, technicians and interventions. # User Authentication This API does not contain any kind of user validation but It request to have a valid authentication user to interact with it. For more information about user Authentication, please refer to [Ravimoshark User Authentication](https://ravimoshark.com/back/apis/auth/latest). 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: dev@ravimoshark.com
@@ -19,14 +19,17 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.ravimoshark.apis.task.model.Addresses;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.io.Serializable;
 /**
  * Client minimum information.
  */
 @Schema(description = "Client minimum information.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-20T13:36:04.593821+02:00[Europe/Rome]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-21T11:08:06.838+02:00[Europe/Paris]")
 public class Clients implements Serializable{
   private static final long serialVersionUID = 1L;
   @SerializedName("refClient")
@@ -40,6 +43,12 @@ public class Clients implements Serializable{
 
   @SerializedName("group")
   private String group = null;
+
+  @SerializedName("addresses")
+  private List<Addresses> addresses = null;
+
+  @SerializedName("addressesId")
+  private List<Long> addressesId = null;
 
   public Clients refClient(String refClient) {
     this.refClient = refClient;
@@ -113,6 +122,58 @@ public class Clients implements Serializable{
     this.group = group;
   }
 
+  public Clients addresses(List<Addresses> addresses) {
+    this.addresses = addresses;
+    return this;
+  }
+
+  public Clients addAddressesItem(Addresses addressesItem) {
+    if (this.addresses == null) {
+      this.addresses = new ArrayList<Addresses>();
+    }
+    this.addresses.add(addressesItem);
+    return this;
+  }
+
+   /**
+   * Get addresses
+   * @return addresses
+  **/
+  @Schema(description = "")
+  public List<Addresses> getAddresses() {
+    return addresses;
+  }
+
+  public void setAddresses(List<Addresses> addresses) {
+    this.addresses = addresses;
+  }
+
+  public Clients addressesId(List<Long> addressesId) {
+    this.addressesId = addressesId;
+    return this;
+  }
+
+  public Clients addAddressesIdItem(Long addressesIdItem) {
+    if (this.addressesId == null) {
+      this.addressesId = new ArrayList<Long>();
+    }
+    this.addressesId.add(addressesIdItem);
+    return this;
+  }
+
+   /**
+   * Get addressesId
+   * @return addressesId
+  **/
+  @Schema(description = "")
+  public List<Long> getAddressesId() {
+    return addressesId;
+  }
+
+  public void setAddressesId(List<Long> addressesId) {
+    this.addressesId = addressesId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -126,12 +187,14 @@ public class Clients implements Serializable{
     return Objects.equals(this.refClient, clients.refClient) &&
         Objects.equals(this.name, clients.name) &&
         Objects.equals(this.nickname, clients.nickname) &&
-        Objects.equals(this.group, clients.group);
+        Objects.equals(this.group, clients.group) &&
+        Objects.equals(this.addresses, clients.addresses) &&
+        Objects.equals(this.addressesId, clients.addressesId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(refClient, name, nickname, group);
+    return Objects.hash(refClient, name, nickname, group, addresses, addressesId);
   }
 
 
@@ -144,6 +207,8 @@ public class Clients implements Serializable{
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    nickname: ").append(toIndentedString(nickname)).append("\n");
     sb.append("    group: ").append(toIndentedString(group)).append("\n");
+    sb.append("    addresses: ").append(toIndentedString(addresses)).append("\n");
+    sb.append("    addressesId: ").append(toIndentedString(addressesId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

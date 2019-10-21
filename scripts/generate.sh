@@ -27,7 +27,7 @@ if ! type "curl" &> /dev/null; then
     exit 1
 fi
 
-API_SPEC="https://ravimosharksas.gitlab.io/apis/contract/documentation/openapi.json"
+API_SPEC="https://ravimosharksas.gitlab.io/apis/task/documentation/openapi.json"
 VERSION="1.0.0"
 function usage(){
     echo "1 - swagger spec location."
@@ -48,8 +48,8 @@ ${SWAGGER_COMMAND} \
     --library=okhttp-gson \
 	--model-package=com.ravimoshark.apis.task.model \
 	--api-package=com.ravimoshark.apis.task.calls \
-	--artifact-version=${VERSION} --artifact-id=apis.task \
-	--group-id=com.ravimoshark \
+	--artifact-version=${VERSION} --artifact-id=task \
+	--group-id=com.ravimoshark.apis \
 	-DserializableModel=true,dateLibrary=legacy \
     --git-repo-id=ravimosharksas/apis/task/libs/android
 

@@ -1,6 +1,6 @@
 /*
- * Ravimoshark Contract API
- * This is an API to interact with Ravimoshark contracts database. # Introduction This API allow to create, modify and delete contracts and machines. It also interacts with machines imported from SAGE database. # User Authentication This API does not contain any kind of user validation but It request to have a valid authentication user to interact with it. For more information about user Authentication, please refer to [Ravimoshark User Authentication](https://ravimoshark.com/back/apis/auth/latest). 
+ * Ravimoshark Task API
+ * This is an API to interact with Ravimoshark task database. # Introduction This API allow to create, modify and delete task, visits, technicians and interventions. # User Authentication This API does not contain any kind of user validation but It request to have a valid authentication user to interact with it. For more information about user Authentication, please refer to [Ravimoshark User Authentication](https://ravimoshark.com/back/apis/auth/latest). 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: dev@ravimoshark.com
@@ -19,7 +19,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.ravimoshark.apis.task.model.Clients;
+import com.ravimoshark.apis.task.model.Interventions;
 import com.ravimoshark.apis.task.model.Metadata;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
@@ -30,14 +30,14 @@ import java.io.Serializable;
  * InlineResponse200
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-20T13:36:04.593821+02:00[Europe/Rome]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-21T11:08:06.838+02:00[Europe/Paris]")
 public class InlineResponse200 implements Serializable{
   private static final long serialVersionUID = 1L;
   @SerializedName("metadata")
   private Metadata metadata = null;
 
   @SerializedName("items")
-  private List<Clients> items = null;
+  private List<Interventions> items = null;
 
   public InlineResponse200 metadata(Metadata metadata) {
     this.metadata = metadata;
@@ -57,14 +57,14 @@ public class InlineResponse200 implements Serializable{
     this.metadata = metadata;
   }
 
-  public InlineResponse200 items(List<Clients> items) {
+  public InlineResponse200 items(List<Interventions> items) {
     this.items = items;
     return this;
   }
 
-  public InlineResponse200 addItemsItem(Clients itemsItem) {
+  public InlineResponse200 addItemsItem(Interventions itemsItem) {
     if (this.items == null) {
-      this.items = new ArrayList<Clients>();
+      this.items = new ArrayList<Interventions>();
     }
     this.items.add(itemsItem);
     return this;
@@ -75,11 +75,11 @@ public class InlineResponse200 implements Serializable{
    * @return items
   **/
   @Schema(description = "")
-  public List<Clients> getItems() {
+  public List<Interventions> getItems() {
     return items;
   }
 
-  public void setItems(List<Clients> items) {
+  public void setItems(List<Interventions> items) {
     this.items = items;
   }
 

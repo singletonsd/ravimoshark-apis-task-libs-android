@@ -1,6 +1,6 @@
 /*
- * Ravimoshark Contract API
- * This is an API to interact with Ravimoshark contracts database. # Introduction This API allow to create, modify and delete contracts and machines. It also interacts with machines imported from SAGE database. # User Authentication This API does not contain any kind of user validation but It request to have a valid authentication user to interact with it. For more information about user Authentication, please refer to [Ravimoshark User Authentication](https://ravimoshark.com/back/apis/auth/latest). 
+ * Ravimoshark Task API
+ * This is an API to interact with Ravimoshark task database. # Introduction This API allow to create, modify and delete task, visits, technicians and interventions. # User Authentication This API does not contain any kind of user validation but It request to have a valid authentication user to interact with it. For more information about user Authentication, please refer to [Ravimoshark User Authentication](https://ravimoshark.com/back/apis/auth/latest). 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: dev@ravimoshark.com
@@ -19,8 +19,8 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.ravimoshark.apis.task.model.Contracts;
 import com.ravimoshark.apis.task.model.Metadata;
+import com.ravimoshark.apis.task.model.Tasks;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -30,14 +30,14 @@ import java.io.Serializable;
  * InlineResponse2001
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-20T13:36:04.593821+02:00[Europe/Rome]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-21T11:08:06.838+02:00[Europe/Paris]")
 public class InlineResponse2001 implements Serializable{
   private static final long serialVersionUID = 1L;
   @SerializedName("metadata")
   private Metadata metadata = null;
 
   @SerializedName("items")
-  private List<Contracts> items = null;
+  private List<Tasks> items = null;
 
   public InlineResponse2001 metadata(Metadata metadata) {
     this.metadata = metadata;
@@ -57,14 +57,14 @@ public class InlineResponse2001 implements Serializable{
     this.metadata = metadata;
   }
 
-  public InlineResponse2001 items(List<Contracts> items) {
+  public InlineResponse2001 items(List<Tasks> items) {
     this.items = items;
     return this;
   }
 
-  public InlineResponse2001 addItemsItem(Contracts itemsItem) {
+  public InlineResponse2001 addItemsItem(Tasks itemsItem) {
     if (this.items == null) {
-      this.items = new ArrayList<Contracts>();
+      this.items = new ArrayList<Tasks>();
     }
     this.items.add(itemsItem);
     return this;
@@ -75,11 +75,11 @@ public class InlineResponse2001 implements Serializable{
    * @return items
   **/
   @Schema(description = "")
-  public List<Contracts> getItems() {
+  public List<Tasks> getItems() {
     return items;
   }
 
-  public void setItems(List<Contracts> items) {
+  public void setItems(List<Tasks> items) {
     this.items = items;
   }
 

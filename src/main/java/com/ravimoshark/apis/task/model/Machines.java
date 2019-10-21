@@ -1,6 +1,6 @@
 /*
- * Ravimoshark Contract API
- * This is an API to interact with Ravimoshark contracts database. # Introduction This API allow to create, modify and delete contracts and machines. It also interacts with machines imported from SAGE database. # User Authentication This API does not contain any kind of user validation but It request to have a valid authentication user to interact with it. For more information about user Authentication, please refer to [Ravimoshark User Authentication](https://ravimoshark.com/back/apis/auth/latest). 
+ * Ravimoshark Task API
+ * This is an API to interact with Ravimoshark task database. # Introduction This API allow to create, modify and delete task, visits, technicians and interventions. # User Authentication This API does not contain any kind of user validation but It request to have a valid authentication user to interact with it. For more information about user Authentication, please refer to [Ravimoshark User Authentication](https://ravimoshark.com/back/apis/auth/latest). 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: dev@ravimoshark.com
@@ -19,19 +19,16 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.ravimoshark.apis.task.model.Locations;
 import com.ravimoshark.apis.task.model.Pieces;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 import java.io.Serializable;
 /**
  * Client&#x27;s machines associated with a contract.
  */
 @Schema(description = "Client's machines associated with a contract.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-20T13:36:04.593821+02:00[Europe/Rome]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-21T11:08:06.838+02:00[Europe/Paris]")
 public class Machines implements Serializable{
   private static final long serialVersionUID = 1L;
   @SerializedName("id")
@@ -45,12 +42,6 @@ public class Machines implements Serializable{
 
   @SerializedName("serialNumber")
   private String serialNumber = null;
-
-  @SerializedName("locations")
-  private List<Locations> locations = null;
-
-  @SerializedName("idLocations")
-  private List<Long> idLocations = null;
 
   @SerializedName("createdAt")
   private Date createdAt = null;
@@ -133,58 +124,6 @@ public class Machines implements Serializable{
     this.serialNumber = serialNumber;
   }
 
-  public Machines locations(List<Locations> locations) {
-    this.locations = locations;
-    return this;
-  }
-
-  public Machines addLocationsItem(Locations locationsItem) {
-    if (this.locations == null) {
-      this.locations = new ArrayList<Locations>();
-    }
-    this.locations.add(locationsItem);
-    return this;
-  }
-
-   /**
-   * Get locations
-   * @return locations
-  **/
-  @Schema(description = "")
-  public List<Locations> getLocations() {
-    return locations;
-  }
-
-  public void setLocations(List<Locations> locations) {
-    this.locations = locations;
-  }
-
-  public Machines idLocations(List<Long> idLocations) {
-    this.idLocations = idLocations;
-    return this;
-  }
-
-  public Machines addIdLocationsItem(Long idLocationsItem) {
-    if (this.idLocations == null) {
-      this.idLocations = new ArrayList<Long>();
-    }
-    this.idLocations.add(idLocationsItem);
-    return this;
-  }
-
-   /**
-   * Get idLocations
-   * @return idLocations
-  **/
-  @Schema(description = "")
-  public List<Long> getIdLocations() {
-    return idLocations;
-  }
-
-  public void setIdLocations(List<Long> idLocations) {
-    this.idLocations = idLocations;
-  }
-
   public Machines createdAt(Date createdAt) {
     this.createdAt = createdAt;
     return this;
@@ -253,8 +192,6 @@ public class Machines implements Serializable{
         Objects.equals(this.refArticle, machines.refArticle) &&
         Objects.equals(this.piece, machines.piece) &&
         Objects.equals(this.serialNumber, machines.serialNumber) &&
-        Objects.equals(this.locations, machines.locations) &&
-        Objects.equals(this.idLocations, machines.idLocations) &&
         Objects.equals(this.createdAt, machines.createdAt) &&
         Objects.equals(this.updatedAt, machines.updatedAt) &&
         Objects.equals(this.deleted, machines.deleted);
@@ -262,7 +199,7 @@ public class Machines implements Serializable{
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, refArticle, piece, serialNumber, locations, idLocations, createdAt, updatedAt, deleted);
+    return Objects.hash(id, refArticle, piece, serialNumber, createdAt, updatedAt, deleted);
   }
 
 
@@ -275,8 +212,6 @@ public class Machines implements Serializable{
     sb.append("    refArticle: ").append(toIndentedString(refArticle)).append("\n");
     sb.append("    piece: ").append(toIndentedString(piece)).append("\n");
     sb.append("    serialNumber: ").append(toIndentedString(serialNumber)).append("\n");
-    sb.append("    locations: ").append(toIndentedString(locations)).append("\n");
-    sb.append("    idLocations: ").append(toIndentedString(idLocations)).append("\n");
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
     sb.append("    updatedAt: ").append(toIndentedString(updatedAt)).append("\n");
     sb.append("    deleted: ").append(toIndentedString(deleted)).append("\n");

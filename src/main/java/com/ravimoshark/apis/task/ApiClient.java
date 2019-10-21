@@ -1,6 +1,6 @@
 /*
- * Ravimoshark Contract API
- * This is an API to interact with Ravimoshark contracts database. # Introduction This API allow to create, modify and delete contracts and machines. It also interacts with machines imported from SAGE database. # User Authentication This API does not contain any kind of user validation but It request to have a valid authentication user to interact with it. For more information about user Authentication, please refer to [Ravimoshark User Authentication](https://ravimoshark.com/back/apis/auth/latest). 
+ * Ravimoshark Task API
+ * This is an API to interact with Ravimoshark task database. # Introduction This API allow to create, modify and delete task, visits, technicians and interventions. # User Authentication This API does not contain any kind of user validation but It request to have a valid authentication user to interact with it. For more information about user Authentication, please refer to [Ravimoshark User Authentication](https://ravimoshark.com/back/apis/auth/latest). 
  *
  * OpenAPI spec version: 1.0.0
  * Contact: dev@ravimoshark.com
@@ -48,7 +48,7 @@ import com.ravimoshark.apis.task.auth.OAuth;
 
 public class ApiClient {
 
-    private String basePath = "http://localhost:8000";
+    private String basePath = "http://localhost:8001";
     private boolean debugging = false;
     private Map<String, String> defaultHeaderMap = new HashMap<String, String>();
     private String tempFolderPath = null;
@@ -85,9 +85,6 @@ public class ApiClient {
 
         // Setup authentications (key: authentication name, value: authentication).
         authentications = new HashMap<String, Authentication>();
-        authentications.put("api_key", new ApiKeyAuth("header", "api_key"));
-        authentications.put("basic_auth", new HttpBasicAuth());
-        authentications.put("main_auth", new OAuth());
         // Prevent the authentications from being modified.
         authentications = Collections.unmodifiableMap(authentications);
     }
@@ -104,7 +101,7 @@ public class ApiClient {
     /**
      * Set base path
      *
-     * @param basePath Base path of the URL (e.g http://localhost:8000
+     * @param basePath Base path of the URL (e.g http://localhost:8001
      * @return An instance of OkHttpClient
      */
     public ApiClient setBasePath(String basePath) {
