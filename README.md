@@ -2,7 +2,7 @@
 
 > The **main repository** is hosted in [gitlab.com/ravimosharksas](https://gitlab.com/ravimosharksas/apis/task/libs/android.git) but it is automatically mirrored to [github.com/RavimoShark](https://github.com/RavimoShark/apis-task-libs-android.git), [gitlab.com/singletonsd](https://gitlab.com/singletonsd/ravimosharksas/apis/task/libs/android.git), [github.com/singletonsd](https://github.com/singletonsd/ravimoshark-apis-task-libs-android.git), [github.com/patoperpetua](https://github.com/patoperpetua/ravimoshark-apis-task-libs-android.git) and to [gitlab.com/patoperpetua](https://gitlab.com/patoperpetua/ravimoshark-apis-task-libs-android.git). If you are in the Github page it may occur that is not updated to the last version.
 
-Ravimoshark Contract API
+Ravimoshark Task API
 
 - API version: 1.0.0
   - Build date: 2019-10-20T13:36:04.593821+02:00[Europe/Rome]
@@ -180,7 +180,7 @@ Authentication schemes defined for the API:
 
 ## Recommendation
 
-It's recommended to create an instance of `ApiClient` per thread in a multithreaded environment to avoid any potential issues.
+It's recommended to create an instance of `ApiClient` per thread in a multi-threaded environment to avoid any potential issues.
 
 ----------------------
 

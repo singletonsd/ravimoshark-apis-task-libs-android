@@ -11,6 +11,7 @@ variables:
   JAVA_MAIN_EXECUTE_TEST: "true" # To execute test.
   JAVA_MAIN_EXECUTE_DEPLOY: "true" # To deploy to maven.
   ORIGINAL_REPOSITORY: "ravimosharksas/apis/task/libs/android"
+
 stages:
   - build
   - test
