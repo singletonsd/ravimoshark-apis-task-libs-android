@@ -34,7 +34,7 @@ import java.io.Serializable;
  * Task information.
  */
 @Schema(description = "Task information.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-24T13:37:59.411+02:00[Europe/Paris]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-24T13:51:00.180+02:00[Europe/Paris]")
 public class Tasks implements Serializable{
   private static final long serialVersionUID = 1L;
   @SerializedName("id")
@@ -86,10 +86,10 @@ public class Tasks implements Serializable{
   private Long taskTime = null;
 
   @SerializedName("ratingClient")
-  private Long ratingClient = null;
+  private Float ratingClient = null;
 
   @SerializedName("ratingTech")
-  private Long ratingTech = null;
+  private Float ratingTech = null;
 
   @SerializedName("gpsStatusCode")
   private Long gpsStatusCode = null;
@@ -400,7 +400,7 @@ public class Tasks implements Serializable{
     this.taskTime = taskTime;
   }
 
-  public Tasks ratingClient(Long ratingClient) {
+  public Tasks ratingClient(Float ratingClient) {
     this.ratingClient = ratingClient;
     return this;
   }
@@ -410,15 +410,15 @@ public class Tasks implements Serializable{
    * @return ratingClient
   **/
   @Schema(description = "")
-  public Long getRatingClient() {
+  public Float getRatingClient() {
     return ratingClient;
   }
 
-  public void setRatingClient(Long ratingClient) {
+  public void setRatingClient(Float ratingClient) {
     this.ratingClient = ratingClient;
   }
 
-  public Tasks ratingTech(Long ratingTech) {
+  public Tasks ratingTech(Float ratingTech) {
     this.ratingTech = ratingTech;
     return this;
   }
@@ -428,11 +428,11 @@ public class Tasks implements Serializable{
    * @return ratingTech
   **/
   @Schema(description = "")
-  public Long getRatingTech() {
+  public Float getRatingTech() {
     return ratingTech;
   }
 
-  public void setRatingTech(Long ratingTech) {
+  public void setRatingTech(Float ratingTech) {
     this.ratingTech = ratingTech;
   }
 
