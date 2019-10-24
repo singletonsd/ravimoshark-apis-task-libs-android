@@ -17,7 +17,7 @@ import com.ravimoshark.apis.task.Pair;
 import java.util.Map;
 import java.util.List;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-24T11:54:02.234+02:00[Europe/Paris]")public class ApiKeyAuth implements Authentication {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-24T13:31:12.276+02:00[Europe/Paris]")public class ApiKeyAuth implements Authentication {
   private final String location;
   private final String paramName;
 

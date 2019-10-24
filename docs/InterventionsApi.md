@@ -194,7 +194,7 @@ No authorization required
 
 <a name="getInterventions"></a>
 # **getInterventions**
-> InlineResponse200 getInterventions(skip, limit, orderBy, filterBy, deleted, metadata, refClient, finished, technicianId, dateFrom, dateUntil)
+> InlineResponse200 getInterventions(skip, limit, orderBy, filterBy, deleted, metadata, refClient, technicianId, taskId, dateFrom, dateUntil)
 
 Get all interventions.
 
@@ -215,12 +215,12 @@ String filterBy = "filterBy_example"; // String | filter data.
 Deleted deleted = new Deleted(); // Deleted | Get all, deleted, not deleted data. Default not deleted.
 Boolean metadata = true; // Boolean | If metadata is needed (for pagination controls)
 String refClient = "refClient_example"; // String | Data from a desired client
-Finished finished = new Finished(); // Finished | Get all, finished or unfinished task. Default not finished.
-String technicianId = "technicianId_example"; // String | Data from a desired technician
+String technicianId = "technicianId_example"; // String | Id from a desired technician
+String taskId = "taskId_example"; // String | Id of the task associated
 Date dateFrom = new Date(); // Date | Date from
 Date dateUntil = new Date(); // Date | Date until
 try {
-    InlineResponse200 result = apiInstance.getInterventions(skip, limit, orderBy, filterBy, deleted, metadata, refClient, finished, technicianId, dateFrom, dateUntil);
+    InlineResponse200 result = apiInstance.getInterventions(skip, limit, orderBy, filterBy, deleted, metadata, refClient, technicianId, taskId, dateFrom, dateUntil);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling InterventionsApi#getInterventions");
@@ -239,8 +239,8 @@ Name | Type | Description  | Notes
  **deleted** | [**Deleted**](.md)| Get all, deleted, not deleted data. Default not deleted. | [optional]
  **metadata** | **Boolean**| If metadata is needed (for pagination controls) | [optional]
  **refClient** | **String**| Data from a desired client | [optional]
- **finished** | [**Finished**](.md)| Get all, finished or unfinished task. Default not finished. | [optional]
- **technicianId** | **String**| Data from a desired technician | [optional]
+ **technicianId** | **String**| Id from a desired technician | [optional]
+ **taskId** | **String**| Id of the task associated | [optional]
  **dateFrom** | **Date**| Date from | [optional]
  **dateUntil** | **Date**| Date until | [optional]
 

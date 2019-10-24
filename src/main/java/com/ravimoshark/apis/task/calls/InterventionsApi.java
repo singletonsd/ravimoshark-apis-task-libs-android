@@ -29,7 +29,6 @@ import java.io.IOException;
 import com.ravimoshark.apis.task.model.CustomError;
 import java.util.Date;
 import com.ravimoshark.apis.task.model.Deleted;
-import com.ravimoshark.apis.task.model.Finished;
 import com.ravimoshark.apis.task.model.IdInteger;
 import com.ravimoshark.apis.task.model.InlineResponse200;
 import com.ravimoshark.apis.task.model.Interventions;
@@ -572,8 +571,8 @@ public class InterventionsApi {
      * @param deleted Get all, deleted, not deleted data. Default not deleted. (optional)
      * @param metadata If metadata is needed (for pagination controls) (optional)
      * @param refClient Data from a desired client (optional)
-     * @param finished Get all, finished or unfinished task. Default not finished. (optional)
-     * @param technicianId Data from a desired technician (optional)
+     * @param technicianId Id from a desired technician (optional)
+     * @param taskId Id of the task associated (optional)
      * @param dateFrom Date from (optional)
      * @param dateUntil Date until (optional)
      * @param progressListener Progress listener
@@ -581,7 +580,7 @@ public class InterventionsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getInterventionsCall(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, Finished finished, String technicianId, Date dateFrom, Date dateUntil, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getInterventionsCall(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, String technicianId, String taskId, Date dateFrom, Date dateUntil, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -603,10 +602,10 @@ public class InterventionsApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("metadata", metadata));
         if (refClient != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("refClient", refClient));
-        if (finished != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("finished", finished));
         if (technicianId != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("technicianId", technicianId));
+        if (taskId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("taskId", taskId));
         if (dateFrom != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("dateFrom", dateFrom));
         if (dateUntil != null)
@@ -645,9 +644,9 @@ public class InterventionsApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getInterventionsValidateBeforeCall(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, Finished finished, String technicianId, Date dateFrom, Date dateUntil, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getInterventionsValidateBeforeCall(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, String technicianId, String taskId, Date dateFrom, Date dateUntil, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
-        com.squareup.okhttp.Call call = getInterventionsCall(skip, limit, orderBy, filterBy, deleted, metadata, refClient, finished, technicianId, dateFrom, dateUntil, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getInterventionsCall(skip, limit, orderBy, filterBy, deleted, metadata, refClient, technicianId, taskId, dateFrom, dateUntil, progressListener, progressRequestListener);
         return call;
 
         
@@ -666,15 +665,15 @@ public class InterventionsApi {
      * @param deleted Get all, deleted, not deleted data. Default not deleted. (optional)
      * @param metadata If metadata is needed (for pagination controls) (optional)
      * @param refClient Data from a desired client (optional)
-     * @param finished Get all, finished or unfinished task. Default not finished. (optional)
-     * @param technicianId Data from a desired technician (optional)
+     * @param technicianId Id from a desired technician (optional)
+     * @param taskId Id of the task associated (optional)
      * @param dateFrom Date from (optional)
      * @param dateUntil Date until (optional)
      * @return InlineResponse200
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public InlineResponse200 getInterventions(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, Finished finished, String technicianId, Date dateFrom, Date dateUntil) throws ApiException {
-        ApiResponse<InlineResponse200> resp = getInterventionsWithHttpInfo(skip, limit, orderBy, filterBy, deleted, metadata, refClient, finished, technicianId, dateFrom, dateUntil);
+    public InlineResponse200 getInterventions(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, String technicianId, String taskId, Date dateFrom, Date dateUntil) throws ApiException {
+        ApiResponse<InlineResponse200> resp = getInterventionsWithHttpInfo(skip, limit, orderBy, filterBy, deleted, metadata, refClient, technicianId, taskId, dateFrom, dateUntil);
         return resp.getData();
     }
 
@@ -688,15 +687,15 @@ public class InterventionsApi {
      * @param deleted Get all, deleted, not deleted data. Default not deleted. (optional)
      * @param metadata If metadata is needed (for pagination controls) (optional)
      * @param refClient Data from a desired client (optional)
-     * @param finished Get all, finished or unfinished task. Default not finished. (optional)
-     * @param technicianId Data from a desired technician (optional)
+     * @param technicianId Id from a desired technician (optional)
+     * @param taskId Id of the task associated (optional)
      * @param dateFrom Date from (optional)
      * @param dateUntil Date until (optional)
      * @return ApiResponse&lt;InlineResponse200&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<InlineResponse200> getInterventionsWithHttpInfo(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, Finished finished, String technicianId, Date dateFrom, Date dateUntil) throws ApiException {
-        com.squareup.okhttp.Call call = getInterventionsValidateBeforeCall(skip, limit, orderBy, filterBy, deleted, metadata, refClient, finished, technicianId, dateFrom, dateUntil, null, null);
+    public ApiResponse<InlineResponse200> getInterventionsWithHttpInfo(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, String technicianId, String taskId, Date dateFrom, Date dateUntil) throws ApiException {
+        com.squareup.okhttp.Call call = getInterventionsValidateBeforeCall(skip, limit, orderBy, filterBy, deleted, metadata, refClient, technicianId, taskId, dateFrom, dateUntil, null, null);
         Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -711,15 +710,15 @@ public class InterventionsApi {
      * @param deleted Get all, deleted, not deleted data. Default not deleted. (optional)
      * @param metadata If metadata is needed (for pagination controls) (optional)
      * @param refClient Data from a desired client (optional)
-     * @param finished Get all, finished or unfinished task. Default not finished. (optional)
-     * @param technicianId Data from a desired technician (optional)
+     * @param technicianId Id from a desired technician (optional)
+     * @param taskId Id of the task associated (optional)
      * @param dateFrom Date from (optional)
      * @param dateUntil Date until (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getInterventionsAsync(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, Finished finished, String technicianId, Date dateFrom, Date dateUntil, final ApiCallback<InlineResponse200> callback) throws ApiException {
+    public com.squareup.okhttp.Call getInterventionsAsync(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, String technicianId, String taskId, Date dateFrom, Date dateUntil, final ApiCallback<InlineResponse200> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -740,7 +739,7 @@ public class InterventionsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = getInterventionsValidateBeforeCall(skip, limit, orderBy, filterBy, deleted, metadata, refClient, finished, technicianId, dateFrom, dateUntil, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = getInterventionsValidateBeforeCall(skip, limit, orderBy, filterBy, deleted, metadata, refClient, technicianId, taskId, dateFrom, dateUntil, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

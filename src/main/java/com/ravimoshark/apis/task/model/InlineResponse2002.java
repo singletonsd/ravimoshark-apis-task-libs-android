@@ -30,7 +30,7 @@ import java.io.Serializable;
  * InlineResponse2002
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-24T11:54:02.234+02:00[Europe/Paris]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-24T13:31:12.276+02:00[Europe/Paris]")
 public class InlineResponse2002 implements Serializable{
   private static final long serialVersionUID = 1L;
   @SerializedName("metadata")
