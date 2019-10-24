@@ -34,7 +34,7 @@ import java.io.Serializable;
  * Task information.
  */
 @Schema(description = "Task information.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-24T10:49:45.922+02:00[Europe/Paris]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-24T11:54:02.234+02:00[Europe/Paris]")
 public class Tasks implements Serializable{
   private static final long serialVersionUID = 1L;
   @SerializedName("id")
@@ -90,6 +90,12 @@ public class Tasks implements Serializable{
 
   @SerializedName("ratingTech")
   private Long ratingTech = null;
+
+  @SerializedName("gpsStatusCode")
+  private Long gpsStatusCode = null;
+
+  @SerializedName("code")
+  private Long code = null;
 
   @SerializedName("interventions")
   private List<Interventions> interventions = null;
@@ -430,6 +436,42 @@ public class Tasks implements Serializable{
     this.ratingTech = ratingTech;
   }
 
+  public Tasks gpsStatusCode(Long gpsStatusCode) {
+    this.gpsStatusCode = gpsStatusCode;
+    return this;
+  }
+
+   /**
+   * Get gpsStatusCode
+   * @return gpsStatusCode
+  **/
+  @Schema(description = "")
+  public Long getGpsStatusCode() {
+    return gpsStatusCode;
+  }
+
+  public void setGpsStatusCode(Long gpsStatusCode) {
+    this.gpsStatusCode = gpsStatusCode;
+  }
+
+  public Tasks code(Long code) {
+    this.code = code;
+    return this;
+  }
+
+   /**
+   * Get code
+   * @return code
+  **/
+  @Schema(description = "")
+  public Long getCode() {
+    return code;
+  }
+
+  public void setCode(Long code) {
+    this.code = code;
+  }
+
   public Tasks interventions(List<Interventions> interventions) {
     this.interventions = interventions;
     return this;
@@ -564,6 +606,8 @@ public class Tasks implements Serializable{
         Objects.equals(this.taskTime, tasks.taskTime) &&
         Objects.equals(this.ratingClient, tasks.ratingClient) &&
         Objects.equals(this.ratingTech, tasks.ratingTech) &&
+        Objects.equals(this.gpsStatusCode, tasks.gpsStatusCode) &&
+        Objects.equals(this.code, tasks.code) &&
         Objects.equals(this.interventions, tasks.interventions) &&
         Objects.equals(this.interventionsId, tasks.interventionsId) &&
         Objects.equals(this.createdAt, tasks.createdAt) &&
@@ -573,7 +617,7 @@ public class Tasks implements Serializable{
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, addressId, address, technicianId, technician, taskType, machine, machineId, dateCall, dateFix, problem, solution, priority, initiator, initiatorId, taskTime, ratingClient, ratingTech, interventions, interventionsId, createdAt, updatedAt, deleted);
+    return Objects.hash(id, addressId, address, technicianId, technician, taskType, machine, machineId, dateCall, dateFix, problem, solution, priority, initiator, initiatorId, taskTime, ratingClient, ratingTech, gpsStatusCode, code, interventions, interventionsId, createdAt, updatedAt, deleted);
   }
 
 
@@ -600,6 +644,8 @@ public class Tasks implements Serializable{
     sb.append("    taskTime: ").append(toIndentedString(taskTime)).append("\n");
     sb.append("    ratingClient: ").append(toIndentedString(ratingClient)).append("\n");
     sb.append("    ratingTech: ").append(toIndentedString(ratingTech)).append("\n");
+    sb.append("    gpsStatusCode: ").append(toIndentedString(gpsStatusCode)).append("\n");
+    sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    interventions: ").append(toIndentedString(interventions)).append("\n");
     sb.append("    interventionsId: ").append(toIndentedString(interventionsId)).append("\n");
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");

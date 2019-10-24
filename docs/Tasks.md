@@ -21,6 +21,8 @@ Name | Type | Description | Notes
 **taskTime** | **Long** |  |  [optional]
 **ratingClient** | **Long** |  |  [optional]
 **ratingTech** | **Long** |  |  [optional]
+**gpsStatusCode** | **Long** |  |  [optional]
+**code** | **Long** |  |  [optional]
 **interventions** | [**List&lt;Interventions&gt;**](Interventions.md) |  |  [optional]
 **interventionsId** | **List&lt;Long&gt;** |  |  [optional]
 **createdAt** | [**Date**](Date.md) |  |  [optional]
