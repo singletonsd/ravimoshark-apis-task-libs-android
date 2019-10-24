@@ -580,7 +580,7 @@ public class InterventionsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getInterventionsCall(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, String technicianId, String taskId, Date dateFrom, Date dateUntil, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getInterventionsCall(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, Long technicianId, Long taskId, Date dateFrom, Date dateUntil, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -644,7 +644,7 @@ public class InterventionsApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getInterventionsValidateBeforeCall(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, String technicianId, String taskId, Date dateFrom, Date dateUntil, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getInterventionsValidateBeforeCall(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, Long technicianId, Long taskId, Date dateFrom, Date dateUntil, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         com.squareup.okhttp.Call call = getInterventionsCall(skip, limit, orderBy, filterBy, deleted, metadata, refClient, technicianId, taskId, dateFrom, dateUntil, progressListener, progressRequestListener);
         return call;
@@ -672,7 +672,7 @@ public class InterventionsApi {
      * @return InlineResponse200
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public InlineResponse200 getInterventions(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, String technicianId, String taskId, Date dateFrom, Date dateUntil) throws ApiException {
+    public InlineResponse200 getInterventions(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, Long technicianId, Long taskId, Date dateFrom, Date dateUntil) throws ApiException {
         ApiResponse<InlineResponse200> resp = getInterventionsWithHttpInfo(skip, limit, orderBy, filterBy, deleted, metadata, refClient, technicianId, taskId, dateFrom, dateUntil);
         return resp.getData();
     }
@@ -694,7 +694,7 @@ public class InterventionsApi {
      * @return ApiResponse&lt;InlineResponse200&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<InlineResponse200> getInterventionsWithHttpInfo(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, String technicianId, String taskId, Date dateFrom, Date dateUntil) throws ApiException {
+    public ApiResponse<InlineResponse200> getInterventionsWithHttpInfo(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, Long technicianId, Long taskId, Date dateFrom, Date dateUntil) throws ApiException {
         com.squareup.okhttp.Call call = getInterventionsValidateBeforeCall(skip, limit, orderBy, filterBy, deleted, metadata, refClient, technicianId, taskId, dateFrom, dateUntil, null, null);
         Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -718,7 +718,7 @@ public class InterventionsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getInterventionsAsync(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, String technicianId, String taskId, Date dateFrom, Date dateUntil, final ApiCallback<InlineResponse200> callback) throws ApiException {
+    public com.squareup.okhttp.Call getInterventionsAsync(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, Long technicianId, Long taskId, Date dateFrom, Date dateUntil, final ApiCallback<InlineResponse200> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;

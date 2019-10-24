@@ -215,7 +215,7 @@ String filterBy = "filterBy_example"; // String | filter data.
 Deleted deleted = new Deleted(); // Deleted | Get all, deleted, not deleted data. Default not deleted.
 Boolean metadata = true; // Boolean | If metadata is needed (for pagination controls)
 String refClient = "refClient_example"; // String | Data from a desired client
-String technicianId = "technicianId_example"; // String | Id from a desired technician
+Long technicianId = 789L; // Long | Id from a desired technician
 Date dateFrom = new Date(); // Date | Date from
 Date dateUntil = new Date(); // Date | Date until
 try {
@@ -238,7 +238,7 @@ Name | Type | Description  | Notes
  **deleted** | [**Deleted**](.md)| Get all, deleted, not deleted data. Default not deleted. | [optional]
  **metadata** | **Boolean**| If metadata is needed (for pagination controls) | [optional]
  **refClient** | **String**| Data from a desired client | [optional]
- **technicianId** | **String**| Id from a desired technician | [optional]
+ **technicianId** | **Long**| Id from a desired technician | [optional]
  **dateFrom** | **Date**| Date from | [optional]
  **dateUntil** | **Date**| Date until | [optional]
 

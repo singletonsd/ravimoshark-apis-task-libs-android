@@ -216,7 +216,7 @@ Deleted deleted = new Deleted(); // Deleted | Get all, deleted, not deleted data
 Boolean metadata = true; // Boolean | If metadata is needed (for pagination controls)
 String refClient = "refClient_example"; // String | Data from a desired client
 Finished finished = new Finished(); // Finished | Get all, finished or unfinished task. Default not finished.
-String technicianId = "technicianId_example"; // String | Id from a desired technician
+Long technicianId = 789L; // Long | Id from a desired technician
 Date dateFixFrom = new Date(); // Date | Date fix from
 Date dateCallUntil = new Date(); // Date | Date call until
 Date dateCallFrom = new Date(); // Date | Date call from
@@ -242,7 +242,7 @@ Name | Type | Description  | Notes
  **metadata** | **Boolean**| If metadata is needed (for pagination controls) | [optional]
  **refClient** | **String**| Data from a desired client | [optional]
  **finished** | [**Finished**](.md)| Get all, finished or unfinished task. Default not finished. | [optional]
- **technicianId** | **String**| Id from a desired technician | [optional]
+ **technicianId** | **Long**| Id from a desired technician | [optional]
  **dateFixFrom** | **Date**| Date fix from | [optional]
  **dateCallUntil** | **Date**| Date call until | [optional]
  **dateCallFrom** | **Date**| Date call from | [optional]

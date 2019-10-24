@@ -27,7 +27,7 @@ import java.io.Serializable;
  * Address information.
  */
 @Schema(description = "Address information.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-24T13:31:12.276+02:00[Europe/Paris]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-24T13:37:59.411+02:00[Europe/Paris]")
 public class Addresses implements Serializable{
   private static final long serialVersionUID = 1L;
   @SerializedName("id")

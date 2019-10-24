@@ -583,7 +583,7 @@ public class TasksApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getTasksCall(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, Finished finished, String technicianId, Date dateFixFrom, Date dateCallUntil, Date dateCallFrom, Date dateFixUntil, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getTasksCall(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, Finished finished, Long technicianId, Date dateFixFrom, Date dateCallUntil, Date dateCallFrom, Date dateFixUntil, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -651,7 +651,7 @@ public class TasksApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getTasksValidateBeforeCall(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, Finished finished, String technicianId, Date dateFixFrom, Date dateCallUntil, Date dateCallFrom, Date dateFixUntil, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getTasksValidateBeforeCall(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, Finished finished, Long technicianId, Date dateFixFrom, Date dateCallUntil, Date dateCallFrom, Date dateFixUntil, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         com.squareup.okhttp.Call call = getTasksCall(skip, limit, orderBy, filterBy, deleted, metadata, refClient, finished, technicianId, dateFixFrom, dateCallUntil, dateCallFrom, dateFixUntil, progressListener, progressRequestListener);
         return call;
@@ -681,7 +681,7 @@ public class TasksApi {
      * @return InlineResponse2001
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public InlineResponse2001 getTasks(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, Finished finished, String technicianId, Date dateFixFrom, Date dateCallUntil, Date dateCallFrom, Date dateFixUntil) throws ApiException {
+    public InlineResponse2001 getTasks(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, Finished finished, Long technicianId, Date dateFixFrom, Date dateCallUntil, Date dateCallFrom, Date dateFixUntil) throws ApiException {
         ApiResponse<InlineResponse2001> resp = getTasksWithHttpInfo(skip, limit, orderBy, filterBy, deleted, metadata, refClient, finished, technicianId, dateFixFrom, dateCallUntil, dateCallFrom, dateFixUntil);
         return resp.getData();
     }
@@ -705,7 +705,7 @@ public class TasksApi {
      * @return ApiResponse&lt;InlineResponse2001&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<InlineResponse2001> getTasksWithHttpInfo(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, Finished finished, String technicianId, Date dateFixFrom, Date dateCallUntil, Date dateCallFrom, Date dateFixUntil) throws ApiException {
+    public ApiResponse<InlineResponse2001> getTasksWithHttpInfo(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, Finished finished, Long technicianId, Date dateFixFrom, Date dateCallUntil, Date dateCallFrom, Date dateFixUntil) throws ApiException {
         com.squareup.okhttp.Call call = getTasksValidateBeforeCall(skip, limit, orderBy, filterBy, deleted, metadata, refClient, finished, technicianId, dateFixFrom, dateCallUntil, dateCallFrom, dateFixUntil, null, null);
         Type localVarReturnType = new TypeToken<InlineResponse2001>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -731,7 +731,7 @@ public class TasksApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getTasksAsync(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, Finished finished, String technicianId, Date dateFixFrom, Date dateCallUntil, Date dateCallFrom, Date dateFixUntil, final ApiCallback<InlineResponse2001> callback) throws ApiException {
+    public com.squareup.okhttp.Call getTasksAsync(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, Finished finished, Long technicianId, Date dateFixFrom, Date dateCallUntil, Date dateCallFrom, Date dateFixUntil, final ApiCallback<InlineResponse2001> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;

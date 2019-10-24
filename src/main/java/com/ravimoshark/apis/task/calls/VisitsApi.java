@@ -579,7 +579,7 @@ public class VisitsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call getVisitsCall(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, String technicianId, Date dateFrom, Date dateUntil, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call getVisitsCall(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, Long technicianId, Date dateFrom, Date dateUntil, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -641,7 +641,7 @@ public class VisitsApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call getVisitsValidateBeforeCall(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, String technicianId, Date dateFrom, Date dateUntil, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call getVisitsValidateBeforeCall(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, Long technicianId, Date dateFrom, Date dateUntil, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         com.squareup.okhttp.Call call = getVisitsCall(skip, limit, orderBy, filterBy, deleted, metadata, refClient, technicianId, dateFrom, dateUntil, progressListener, progressRequestListener);
         return call;
@@ -668,7 +668,7 @@ public class VisitsApi {
      * @return InlineResponse2003
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public InlineResponse2003 getVisits(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, String technicianId, Date dateFrom, Date dateUntil) throws ApiException {
+    public InlineResponse2003 getVisits(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, Long technicianId, Date dateFrom, Date dateUntil) throws ApiException {
         ApiResponse<InlineResponse2003> resp = getVisitsWithHttpInfo(skip, limit, orderBy, filterBy, deleted, metadata, refClient, technicianId, dateFrom, dateUntil);
         return resp.getData();
     }
@@ -689,7 +689,7 @@ public class VisitsApi {
      * @return ApiResponse&lt;InlineResponse2003&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<InlineResponse2003> getVisitsWithHttpInfo(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, String technicianId, Date dateFrom, Date dateUntil) throws ApiException {
+    public ApiResponse<InlineResponse2003> getVisitsWithHttpInfo(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, Long technicianId, Date dateFrom, Date dateUntil) throws ApiException {
         com.squareup.okhttp.Call call = getVisitsValidateBeforeCall(skip, limit, orderBy, filterBy, deleted, metadata, refClient, technicianId, dateFrom, dateUntil, null, null);
         Type localVarReturnType = new TypeToken<InlineResponse2003>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -712,7 +712,7 @@ public class VisitsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call getVisitsAsync(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, String technicianId, Date dateFrom, Date dateUntil, final ApiCallback<InlineResponse2003> callback) throws ApiException {
+    public com.squareup.okhttp.Call getVisitsAsync(Integer skip, Integer limit, String orderBy, String filterBy, Deleted deleted, Boolean metadata, String refClient, Long technicianId, Date dateFrom, Date dateUntil, final ApiCallback<InlineResponse2003> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
