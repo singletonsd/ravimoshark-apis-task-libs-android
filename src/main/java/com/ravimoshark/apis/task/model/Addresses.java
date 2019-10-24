@@ -27,7 +27,7 @@ import java.io.Serializable;
  * Address information.
  */
 @Schema(description = "Address information.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-21T11:08:06.838+02:00[Europe/Paris]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-24T10:29:12.559+02:00[Europe/Paris]")
 public class Addresses implements Serializable{
   private static final long serialVersionUID = 1L;
   @SerializedName("id")
@@ -70,7 +70,7 @@ public class Addresses implements Serializable{
   private String streetName = null;
 
   @SerializedName("streetNumber")
-  private Long streetNumber = null;
+  private String streetNumber = null;
 
   @SerializedName("telephone")
   private String telephone = null;
@@ -309,7 +309,7 @@ public class Addresses implements Serializable{
     this.streetName = streetName;
   }
 
-  public Addresses streetNumber(Long streetNumber) {
+  public Addresses streetNumber(String streetNumber) {
     this.streetNumber = streetNumber;
     return this;
   }
@@ -319,11 +319,11 @@ public class Addresses implements Serializable{
    * @return streetNumber
   **/
   @Schema(description = "")
-  public Long getStreetNumber() {
+  public String getStreetNumber() {
     return streetNumber;
   }
 
-  public void setStreetNumber(Long streetNumber) {
+  public void setStreetNumber(String streetNumber) {
     this.streetNumber = streetNumber;
   }
 

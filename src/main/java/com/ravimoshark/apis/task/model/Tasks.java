@@ -34,7 +34,7 @@ import java.io.Serializable;
  * Task information.
  */
 @Schema(description = "Task information.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-21T11:08:06.838+02:00[Europe/Paris]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-24T10:29:12.559+02:00[Europe/Paris]")
 public class Tasks implements Serializable{
   private static final long serialVersionUID = 1L;
   @SerializedName("id")
@@ -77,7 +77,7 @@ public class Tasks implements Serializable{
   private Long priority = null;
 
   @SerializedName("initiator")
-  private String initiator = null;
+  private Technicians initiator = null;
 
   @SerializedName("taskTime")
   private Long taskTime = null;
@@ -337,7 +337,7 @@ public class Tasks implements Serializable{
     this.priority = priority;
   }
 
-  public Tasks initiator(String initiator) {
+  public Tasks initiator(Technicians initiator) {
     this.initiator = initiator;
     return this;
   }
@@ -347,11 +347,11 @@ public class Tasks implements Serializable{
    * @return initiator
   **/
   @Schema(description = "")
-  public String getInitiator() {
+  public Technicians getInitiator() {
     return initiator;
   }
 
-  public void setInitiator(String initiator) {
+  public void setInitiator(Technicians initiator) {
     this.initiator = initiator;
   }
 

@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **problem** | **String** |  |  [optional]
 **solution** | **String** |  |  [optional]
 **priority** | **Long** |  |  [optional]
-**initiator** | **String** |  |  [optional]
+**initiator** | [**Technicians**](Technicians.md) |  |  [optional]
 **taskTime** | **Long** |  |  [optional]
 **ratingClient** | **Long** |  |  [optional]
 **ratingTech** | **Long** |  |  [optional]
