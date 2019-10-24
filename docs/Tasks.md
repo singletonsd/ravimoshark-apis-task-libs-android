@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **solution** | **String** |  |  [optional]
 **priority** | **Long** |  |  [optional]
 **initiator** | [**Technicians**](Technicians.md) |  |  [optional]
+**initiatorId** | **Long** |  |  [optional]
 **taskTime** | **Long** |  |  [optional]
 **ratingClient** | **Long** |  |  [optional]
 **ratingTech** | **Long** |  |  [optional]

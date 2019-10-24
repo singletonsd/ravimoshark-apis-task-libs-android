@@ -29,7 +29,7 @@ import java.io.Serializable;
  * Intervention information.
  */
 @Schema(description = "Intervention information.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-24T10:29:12.559+02:00[Europe/Paris]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-24T10:49:45.922+02:00[Europe/Paris]")
 public class Interventions implements Serializable{
   private static final long serialVersionUID = 1L;
   @SerializedName("id")

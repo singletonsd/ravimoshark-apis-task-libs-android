@@ -34,7 +34,7 @@ import java.io.Serializable;
  * Task information.
  */
 @Schema(description = "Task information.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-24T10:29:12.559+02:00[Europe/Paris]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-24T10:49:45.922+02:00[Europe/Paris]")
 public class Tasks implements Serializable{
   private static final long serialVersionUID = 1L;
   @SerializedName("id")
@@ -78,6 +78,9 @@ public class Tasks implements Serializable{
 
   @SerializedName("initiator")
   private Technicians initiator = null;
+
+  @SerializedName("initiatorId")
+  private Long initiatorId = null;
 
   @SerializedName("taskTime")
   private Long taskTime = null;
@@ -355,6 +358,24 @@ public class Tasks implements Serializable{
     this.initiator = initiator;
   }
 
+  public Tasks initiatorId(Long initiatorId) {
+    this.initiatorId = initiatorId;
+    return this;
+  }
+
+   /**
+   * Get initiatorId
+   * @return initiatorId
+  **/
+  @Schema(description = "")
+  public Long getInitiatorId() {
+    return initiatorId;
+  }
+
+  public void setInitiatorId(Long initiatorId) {
+    this.initiatorId = initiatorId;
+  }
+
   public Tasks taskTime(Long taskTime) {
     this.taskTime = taskTime;
     return this;
@@ -539,6 +560,7 @@ public class Tasks implements Serializable{
         Objects.equals(this.solution, tasks.solution) &&
         Objects.equals(this.priority, tasks.priority) &&
         Objects.equals(this.initiator, tasks.initiator) &&
+        Objects.equals(this.initiatorId, tasks.initiatorId) &&
         Objects.equals(this.taskTime, tasks.taskTime) &&
         Objects.equals(this.ratingClient, tasks.ratingClient) &&
         Objects.equals(this.ratingTech, tasks.ratingTech) &&
@@ -551,7 +573,7 @@ public class Tasks implements Serializable{
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, addressId, address, technicianId, technician, taskType, machine, machineId, dateCall, dateFix, problem, solution, priority, initiator, taskTime, ratingClient, ratingTech, interventions, interventionsId, createdAt, updatedAt, deleted);
+    return Objects.hash(id, addressId, address, technicianId, technician, taskType, machine, machineId, dateCall, dateFix, problem, solution, priority, initiator, initiatorId, taskTime, ratingClient, ratingTech, interventions, interventionsId, createdAt, updatedAt, deleted);
   }
 
 
@@ -574,6 +596,7 @@ public class Tasks implements Serializable{
     sb.append("    solution: ").append(toIndentedString(solution)).append("\n");
     sb.append("    priority: ").append(toIndentedString(priority)).append("\n");
     sb.append("    initiator: ").append(toIndentedString(initiator)).append("\n");
+    sb.append("    initiatorId: ").append(toIndentedString(initiatorId)).append("\n");
     sb.append("    taskTime: ").append(toIndentedString(taskTime)).append("\n");
     sb.append("    ratingClient: ").append(toIndentedString(ratingClient)).append("\n");
     sb.append("    ratingTech: ").append(toIndentedString(ratingTech)).append("\n");
