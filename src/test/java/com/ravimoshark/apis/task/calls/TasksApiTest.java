@@ -115,7 +115,7 @@ public class TasksApiTest {
         Boolean metadata = null;
         String refClient = null;
         Finished finished = null;
-        String technicianId = null;
+        Long technicianId = null;
         Date dateFixFrom = null;
         Date dateCallUntil = null;
         Date dateCallFrom = null;

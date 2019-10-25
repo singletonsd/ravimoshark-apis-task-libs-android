@@ -114,11 +114,11 @@ public class InterventionsApiTest {
         Deleted deleted = null;
         Boolean metadata = null;
         String refClient = null;
-        Finished finished = null;
-        String technicianId = null;
+        Long technicianId = null;
+        Long taskId = null;
         Date dateFrom = null;
         Date dateUntil = null;
-        InlineResponse200 response = api.getInterventions(skip, limit, orderBy, filterBy, deleted, metadata, refClient, finished, technicianId, dateFrom, dateUntil);
+        InlineResponse200 response = api.getInterventions(skip, limit, orderBy, filterBy, deleted, metadata, refClient, technicianId, taskId, dateFrom, dateUntil);
 
         // TODO: test validations
     }

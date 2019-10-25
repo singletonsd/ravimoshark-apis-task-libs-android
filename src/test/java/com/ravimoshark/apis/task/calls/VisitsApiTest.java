@@ -112,8 +112,8 @@ public class VisitsApiTest {
         Deleted deleted = null;
         Boolean metadata = null;
         String refClient = null;
-        String technicianId = null;
-        InlineResponse2003 response = api.getVisits(skip, limit, orderBy, filterBy, deleted, metadata, refClient, technicianId);
+        Long technicianId = null;
+        InlineResponse2003 response = api.getVisits(skip, limit, orderBy, filterBy, deleted, metadata, refClient, technicianId, null, null);
 
         // TODO: test validations
     }
