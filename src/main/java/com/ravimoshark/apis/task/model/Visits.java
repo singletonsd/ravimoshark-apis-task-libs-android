@@ -31,7 +31,7 @@ import java.io.Serializable;
  * Visit information.
  */
 @Schema(description = "Visit information.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-24T13:51:00.180+02:00[Europe/Paris]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-25T16:26:00.433+02:00[Europe/Paris]")
 public class Visits implements Serializable{
   private static final long serialVersionUID = 1L;
   @SerializedName("id")

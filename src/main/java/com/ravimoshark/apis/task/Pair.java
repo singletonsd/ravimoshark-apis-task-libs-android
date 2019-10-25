@@ -12,7 +12,7 @@
 
 package com.ravimoshark.apis.task;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-24T13:51:00.180+02:00[Europe/Paris]")public class Pair {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2019-10-25T16:26:00.433+02:00[Europe/Paris]")public class Pair {
     private String name = "";
     private String value = "";
 
